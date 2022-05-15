@@ -1,17 +1,10 @@
 form.full {
-  /* margin: auto; */
-  /* width: 0%; */
-  min-width: 60%;
-
-  height: 100vh;
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-evenly;
-
-  font-family: BigNoodleTooOblique;
 }
 
 form.full div.form-control {
@@ -30,9 +23,9 @@ form.full div.form-head {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: auto;
+  height: 100%;
   width: 50%;
-  margin: auto;
+  margin: 0 auto;
   margin-top: 0.5vw;
 }
 
@@ -46,10 +39,12 @@ form.full h2 {
 
 form.full div.form-head h1 {
   margin: 0;
+  font-family: var(--title-font);
 }
 
 form.full div.form-control h2 {
   margin: 0;
+  font-family: var(--button-font);
 }
 
 form div.radio-group {
@@ -62,7 +57,7 @@ form div.radio-group {
 
   padding: 0vw 1vw;
 
-  margin-bottom: 1vw;
+  margin-bottom: 2vw;
 }
 
 div.radio-group input[type="radio"] {
@@ -75,7 +70,10 @@ div.radio-group input[type="radio"] {
 }
 
 div.radio-group label {
-  font-family: BigNoodleTooOblique;
+  font-family: var(--button-font);
+  font-style: oblique;
+  font-weight: 700;
+  text-transform: uppercase;
   font-size: 3vw;
 
   width: 100%;
@@ -129,7 +127,7 @@ div.radio-group input[type=radio]:checked + label {
 }
 
 .ready {
-  font-family: BigNoodleTooOblique;
+  font-family: var(--button-font);
 
   background-color: #ff9029;
   color: white;
@@ -139,7 +137,7 @@ div.radio-group input[type=radio]:checked + label {
   border-style: solid;
   border-width: 0.25vw;
 
-  margin: 32px auto;
+  margin: 2vw auto;
   font-size: 3vw;
 
   padding: 0.5vw 4vw;
@@ -192,4 +190,5 @@ div.radio-group label.s7 {
 
 .navlink {
   font-size: 1.5vw;
+  font-family: var(--title-font);
 }

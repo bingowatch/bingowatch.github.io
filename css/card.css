@@ -9,7 +9,7 @@
 }
 
 table.card {
-  font-family: Koverwatch, 'Nunito Sans';
+  font-family: var(--title-font);
 
   color: white;
   background-color: transparent;
@@ -77,6 +77,8 @@ table.card td div.tile-container {
 }
 
 table.card td div.tile-content {
+  font-family: var(--card-font);
+
   z-index: 1;
   position: absolute;
   top: 0;
@@ -206,8 +208,8 @@ table.card td.hold div.tile-title-content
 }
 
 table.card td div.tile-description {
+  font-family: var(--card-description-font);
   font-size: var(--description-size);
-  font-family: 'Nunito Sans';
 
   padding: 0;
   transform: scaleY(0);
