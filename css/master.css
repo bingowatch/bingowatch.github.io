@@ -1,28 +1,14 @@
-@@font-face {
-  font-family: BigNoodleTooOblique;
-  src: url("big-noogle-too-oblique.woff");
-}
-
-/* @@font-face {
-  font-family: Koverwatch;
-  src:
-    url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.woff2),
-    url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.woff),
-    url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.ttf);
-} */
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
 :root {
   --color: #222936;
-
-  --title-font: Koverwatch, Roboto;
-  --button-font: BigNoodleTooOblique, Roboto;
-  --card-font: Koverwatch, Nunito Sans, Open Sans;
-  --card-description-font: Nunito Sans, Open Sans;
+  --font: Teko, Open Sans;
 }
 
 body {
+  font-family: var(--font);
+
   background-color: #222936;
   background-image: url("background.jpg"), linear-gradient(var(--color), var(--color));
   background-size: cover;

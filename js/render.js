@@ -8,9 +8,9 @@
  * @return {HTMLElement}
  */
 function renderTile(tile, enabled, storeEnabled) {
-  const shrink = 6; // pt
+  const shrink = 0; // pt
   const factor = 0.33;
-  const baseSize = 24;
+  const baseSize = 14;
   const maxDetailsSize = 32; // pt
 
   function enableAnimation(el) {
@@ -43,7 +43,7 @@ function renderTile(tile, enabled, storeEnabled) {
             class: 'tile-title-container',
             child: createElement('div', {
               class: 'tile-title-content',
-              text: tile.name,
+              text: tile.name.toUpperCase(),
               ready: (titleContent) => {
                 const size = fillText(titleContent, titleContainer, 12, 80)-shrink;
                 const calcSize = (baseSize*factor) + size*(1-factor);
@@ -113,17 +113,17 @@ function renderHTML() {
           child: createElement('div', {
             child: [
               createElement('span', {
-                text: `${opt.ranked ? 'competitive':'quickplay'}`,
+                text: `${opt.ranked ? 'COMPETITIVE':'QUICKPLAY'}`,
                 class: 'subtitle',
               }),
 
               createElement('span', {
-                text: 'Bingowatch',
+                text: 'BINGOWATCH',
                 class: ['title', 'text-glow'],
               }),
 
               createElement('span', {
-                text: `${opt.difficulty}`,
+                text: `${opt.difficulty.toUpperCase()}`,
                 class: 'subtitle',
               }),
             ],

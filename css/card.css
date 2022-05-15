@@ -9,7 +9,8 @@
 }
 
 table.card {
-  font-family: var(--title-font);
+  font-family: var(--font);
+  line-height: 0.85;
 
   color: white;
   background-color: transparent;
@@ -38,10 +39,11 @@ table.card {
 
   --tilt-angle: -8deg;
 
-  --title-size: 20pt;
-  --details-title-size: 20pt;
+  --title-size: 24pt;
+  --details-title-size: 24pt;
 
-  --description-size: 12pt;
+  --description-size: 14pt;
+  --adjust-size: 2pt;
 }
 
 @media (max-width: 599px) {
@@ -202,6 +204,9 @@ table.card td.hold div.tile-title-container
 
 table.card td div.tile-title-content {
   font-size: var(--calc-size);
+
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 table.card td div.tile-title-content.transition {
@@ -216,12 +221,14 @@ table.card td:hover div.tile-title-content,
 table.card td.hold div.tile-title-content
 {
   font-size: var(--details-title-size) !important;
-  font-size: calc((var(--calc-size) + var(--details-title-size))/2) !important;
+  font-size: calc(((var(--calc-size) + var(--details-title-size))/2) - var(--adjust-size)) !important;
 }
 
 table.card td div.tile-description {
   font-family: var(--card-description-font);
   font-size: var(--description-size);
+  font-weight: 300;
+  line-height: 1;
 
   padding: 0;
   transform: scaleY(0);
@@ -250,6 +257,10 @@ table.card td.hold div.tile-description
 
 table.card thead {
   user-select: none;
+
+  /* font-style: oblique; */
+  font-weight: 700;
+  font-size: 3vw;
 }
 
 table.card thead tr th {
