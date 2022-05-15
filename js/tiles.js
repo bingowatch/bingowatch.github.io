@@ -42,7 +42,7 @@ const tiles = {
 
   rolled: {
     name: 'Rolled',
-    description: 'Finish a round with 3 minutes left.',
+    description: 'Either team finished a round with 3 minutes left.',
   },
 
   no_ot: {
