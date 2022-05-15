@@ -38,6 +38,7 @@ const pools = {
     ['hog'],
     ['practice_10'],
     ['melee_final_blow'],
+    ['streak_5', 'elims_25'],
   ],
 
   'normal': [
@@ -59,7 +60,6 @@ const pools = {
     ['meme_strat'],
     ['narnia'],
     ['tragic_ult', 'panic_ult'],
-    ['javelin_cancel'],
     ['solo_kill_tank'],
     ['flux_canceled'],
     ['yeprock'],
@@ -71,6 +71,7 @@ const pools = {
     ['team_kill'],
     ['girlbossed'],
     ['practice_5'],
+    ['bob_carry', 'tragic_bob'],
   ],
 
   'normal_exclusive': [
@@ -90,10 +91,12 @@ const pools = {
     ],
     ['dps_support'],
     ['sleep_ult'],
-    ['bob_carry'],
     ['mei_wall'],
     ['eat_beam', 'deflect_beam'],
     ['didnt_need_heals'],
+    ['streak_10', 'elims_30'],
+    ['no_deaths'],
+    ['javelin_cancel'],
   ],
 
   'rare': [
@@ -114,7 +117,6 @@ const pools = {
     ['pinned_offmap'],
     ['ult_eaten', 'ult_shutdown', 'eat_an_ult'],
     ['live_combo'],
-    ['no_deaths'],
     ['tripple_kill', 'quad_kill', 'support_tank_tripple'],
     ['leaver_train'],
     ['zen_gold_heals', 'dps_support', 'dps_moria'],
@@ -123,7 +125,6 @@ const pools = {
     ['bad_hook'],
     ['sigma_9'],
     ['negative_kdr'],
-    ['bob_carry', 'tragic_bob'],
     ['mei_wall', 'spawn_mei_wall'],
     ['found_mines'],
     ['positive_chat', 'copium'],
@@ -151,9 +152,11 @@ const pools = {
     ['chain_hack'],
     ['sym_torb'],
     ['torb_hammer'],
+    ['javelin_cancel', 'javelin_boop'],
   ],
 
   'rare_exclusive': [
+    ['streak_10', 'streak_15', 'elims_30', 'elims_35'],
   ],
 
   'impossible': [
@@ -162,6 +165,7 @@ const pools = {
     ['healer_76'],
     ['combo_4k'],
     ['die_thru_transce'],
+    ['streak_15', 'streak_20', 'elims_35', 'elims_40'],
   ],
 
   'free': [

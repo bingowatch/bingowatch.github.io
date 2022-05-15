@@ -125,6 +125,48 @@ const tiles = {
     description: 'Get a final blow with melee.',
   },
 
+  // kill streak
+
+  streak_5: {
+    name: '5 Kill Streak',
+    description: 'Get 5 elims in 1 Life',
+  },
+
+  streak_10: {
+    name: '10 Kill Streak',
+    description: 'Get 10 elims in 1 life',
+  },
+
+  streak_15: {
+    name: '15 Kill Streak',
+    description: 'Get 15 elims in 1 life',
+  },
+
+  streak_20: {
+    name: '20 Kill Streak',
+    description: 'Get 20 elims in 1 life',
+  },
+
+  elims_25: {
+    name: '25 Elims',
+    description: 'Get 25 elims.',
+  },
+
+  elims_30: {
+    name: '30 Elims',
+    description: 'Get 30 elims.',
+  },
+
+  elims_35: {
+    name: '35 Elims',
+    description: 'Get 35 elims.',
+  },
+
+  elims_40: {
+    name: '40 Elims',
+    description: 'Get 40 elims.',
+  },
+
   // chat
 
   open_mic: {
@@ -538,6 +580,11 @@ const tiles = {
     description: 'Someone canceled an ultimate with Orisa\'s Javelin Throw.',
   },
 
+  javelin_boop: {
+    name: 'Javelin Boop',
+    description: 'Someone got an environmental kill with Orisa\'s Javelin Throw.',
+  },
+
   sniper_monkey: {
     name: 'Sniper Monkey',
     description: 'A final blow with Winston\'s secondary fire.',
@@ -630,7 +677,7 @@ const tiles = {
   },
 
   high_what: {
-    name: 'It\'s High N‑',
+    name: 'It\'s High What?',
     description: 'Cassidy\'s ult was canceled.',
   },
 
