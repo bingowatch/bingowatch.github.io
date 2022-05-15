@@ -20,7 +20,6 @@ function renderTile(tile, enabled, storeEnabled) {
     el.classList.add('hold');
 
     const animationEnd = () => {
-      console.log('animationend', Date.now());
       el.removeEventListener('animationend', animationEnd);
       clearTimeout(el.animationEndTimeout);
       el.animationEndTimeout = setTimeout(()=>el.classList.remove('animation-enable'), 0);

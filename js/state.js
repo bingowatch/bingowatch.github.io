@@ -7,7 +7,6 @@ class State {
   constructor(opt, size=24) {
     this.hash = opt.seed + ':' + simpleHash(JSON.stringify(opt));
     this.loadState();
-    console.log(this.enabled)
     this.enabled = this.enabled.length
       ? this.enabled
       : (new Array(size+1)).fill('0')
@@ -28,7 +27,6 @@ class State {
   }
 
   loadState() {
-    console.log(this.getStorage('enabled'));
     this.enabled = (this.getStorage('enabled') ?? '').split(State.DELIM);
   }
 
@@ -37,7 +35,7 @@ class State {
   }
 
   get(n) {
-    return (this.enabled[n] ?? '0') == '1'
+    return (this.enabled[n] ?? '0') == '1';
   }
 
   set(n, enable) {
