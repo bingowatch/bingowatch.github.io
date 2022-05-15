@@ -1,0 +1,333 @@
+.wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+
+  overflow: hidden;
+}
+
+table.card {
+  font-family: Koverwatch, 'Nunito Sans';
+
+  color: white;
+  background-color: transparent;
+
+  padding: 0px 32px 32px 32px;
+
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+
+  border-spacing: 8px;
+  border-radius: 4px;
+
+  --tile-color: #4e7aff;
+  --tile-enable-color: #c9d54d;
+
+  --tile-width: 128px;
+  --tile-height: 140px;
+
+  --details-width: 176px;
+  --details-height: 210px;
+
+  --transform-speed: 0.1s;
+  --transition-delay: calc(var(--transform-speed)/2);
+
+  --tilt-angle: -8deg;
+
+  --title-size: 20pt;
+  --details-title-size: 20pt;
+
+  --description-size: 12pt;
+}
+
+table.card td div.tile-container, table.card td div.tile-content {
+  width: var(--tile-width);
+  height: var(--tile-height);
+
+  min-width: var(--tile-width);
+  min-height: var(--tile-height);
+
+  max-width: var(--tile-width);
+  max-height: var(--tile-height);
+}
+
+table.card td:hover div.tile-content,
+table.card td.hold div.tile-content
+{
+  width: var(--details-width);
+  height: var(--details-height);
+
+  min-width: var(--details-width);
+  min-height: var(--details-height);
+
+  max-width: var(--details-width);
+  max-height: var(--details-height);
+}
+
+table.card td {
+  user-select: none;
+}
+
+table.card td div.tile-container {
+  position: relative;
+}
+
+table.card td div.tile-content {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 4px;
+
+  font-size: var(--title-size);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+
+  background-color: var(--tile-color);
+
+  box-shadow:
+    inset 0 0 8px 0px rgba(0,0,0,0.05),
+    0 0 8px 0px rgba(0,0,0,0.1);
+
+  transition:
+    font-size var(--transform-speed),
+
+    padding var(--transform-speed),
+
+    transform var(--transform-speed),
+
+    width var(--transform-speed),
+    height var(--transform-speed),
+    min-width var(--transform-speed),
+    min-height var(--transform-speed),
+    max-width var(--transform-speed),
+    max-height var(--transform-speed),
+
+    border-radius var(--transform-speed),
+    border-width var(--transform-speed),
+
+    z-index var(--transform-speed),
+
+    box-shadow 0.5s ease,
+
+    background 0.25s;
+}
+
+table.card td.animation-enable div.tile-content {
+  animation-duration: 0.25s;
+  animation-name: tile-select-enable;
+  animation-timing-function: linear;
+}
+
+table.card td div.tile-content.enable {
+  background-color: var(--tile-enable-color);
+
+  box-shadow:
+    inset 0 0 8px 0px rgba(0,0,0,0.05),
+    0 0 8px 0px rgba(251, 255, 51, 0.5);
+}
+
+table.card td:hover div.tile-content,
+table.card td.hold div.tile-content
+{
+  z-index: 10;
+
+  padding: 8px;
+
+  font-size: var(--details-title-size);
+
+  --offset-x: calc((var(--tile-width) - var(--details-width))/2);
+  --offset-y: calc((var(--tile-height) - var(--details-height))/2);
+  --offset: translate(var(--offset-x), var(--offset-y));
+
+  transform: var(--offset) skew(var(--tilt-angle));
+
+  border-width: 6px;
+  border-radius: 12px;
+
+  box-shadow:
+    inset 0 0 12px 0px rgba(0,0,0,0.05),
+    0px 0px 8px 4px white,
+    0px 0px 32px 8px #fbee3c,
+    0px 0px 40px 6px white;
+
+  transition-delay: var(--transform-delay);
+}
+
+table.card td.hold div.tile-content {
+  z-index: 5;
+}
+
+table.card td div.tile-title-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table.card td:hover div.tile-title-container,
+table.card td.hold div.tile-title-container
+{
+  height: auto;
+}
+
+table.card td div.tile-title-content {
+  font-size: var(--calc-size);
+}
+
+table.card td div.tile-title-content.transition {
+  transition:
+    font-size var(--transform-speed),
+    height var(--transform-speed);
+
+  transition-delay: var(--transform-delay);
+}
+
+table.card td:hover div.tile-title-content,
+table.card td.hold div.tile-title-content
+{
+  font-size: var(--details-title-size) !important;
+  font-size: calc((var(--calc-size) + var(--details-title-size))/2) !important;
+}
+
+table.card td div.tile-description {
+  font-size: var(--description-size);
+  font-family: 'Nunito Sans';
+
+  padding: 0;
+  transform: scaleY(0);
+  transform-origin: center 25%;
+  max-height: 0;
+  width: var(--details-width);
+  opacity: 0;
+
+  transition:
+    padding var(--transform-speed),
+    transform var(--transform-speed),
+    opacity var(--transform-speed),
+    max-height var(--transform-speed);
+}
+
+table.card td:hover div.tile-description,
+table.card td.hold div.tile-description
+{
+  transform: scaleY(1);
+  max-height: var(--details-height);
+  opacity: 1;
+  padding: 4px 12px;
+
+  transition-delay: var(--transform-delay);
+}
+
+table.card thead {
+  user-select: none;
+}
+
+table.card thead tr th {
+}
+
+table.card thead tr th div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+table.card thead tr .title {
+  font-size: 48pt;
+  margin: 4px 24px;
+}
+
+table.card thead tr .subtitle {
+  font-size: 16pt;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes tile-select-enable {
+
+  20% {
+    border-width: 6px;
+    box-shadow:
+      inset 0 0 12px 0px rgba(255,255,255, 0.05),
+
+      0px 0px 12px 6px white,
+
+      0px 0px 32px 8px #fbee3c,
+      0px 0px 40px 6px white,
+
+      0px 0px 32px 0px #fbee3c,
+      0px 0px 40px 0px white;
+  }
+
+  40% {
+    border-width: 8px;
+
+    box-shadow:
+      inset 0 0 32px 4px rgba(255,255,255, 0.1),
+
+      0px 0px 12px 6px white,
+
+      0px 0px 32px 8px #fbee3c,
+      0px 0px 40px 6px white,
+
+      0px 0px 128px 32px #fbee3c,
+      0px 0px 256px 64px white;
+  }
+
+  80% {
+    border-width: 6px;
+
+    box-shadow:
+      inset 0 0 12px 0px rgba(255,255,255, 0),
+
+      0px 0px 16px 4px white,
+
+      0px 0px 32px 8px #fbee3c,
+      0px 0px 40px 6px white,
+
+      0px 0px 0px 0px white,
+      0px 0px 256px -128px rgb(251, 238, 60, 0.6),
+      0px 0px 1024px -256px rgba(255,255,255, 0.6);
+  }
+
+  90% {
+    border-width: 6px;
+
+    box-shadow:
+      inset 0 0 12px 0px rgba(255,255,255, 0),
+
+      0px 0px 16px 4px white,
+
+      0px 0px 32px 8px #fbee3c,
+      0px 0px 40px 6px white,
+
+      0px 0px 0px 0px white,
+      0px 0px 256px 0px rgb(251, 238, 60, 0),
+      0px 0px 1024px 0px rgba(255,255,255, 0);
+  }
+
+  95$ {
+    box-shadow:
+      inset 0 0 12px 0px rgba(0,0,0,0.05),
+      0px 0px 8px 4px white,
+      0px 0px 32px 8px #fbee3c,
+      0px 0px 40px 6px white;
+  }
+}

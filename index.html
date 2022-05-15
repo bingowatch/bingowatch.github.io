@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <meta charset="utf-8">
+    <title>Bingowatch</title>
+  </head>
+  <body>
+    <form class="full" action="render.html" method="get">
+
+      <div class="form-head">
+        <a href="/index.html" class="cleareffects"><span class="navlink">Contribute</span></a>
+        <a href="/index.html" class="cleareffects"><h1 class="text-glow">Bingowatch</h1></a>
+        <a href="/index.html" class="cleareffects"><span class="navlink">Suggestions</span></a>
+      </div>
+
+      <div class="form-control">
+        <h2 class="text-glow">Mode</h2>
+
+        <div class="radio-group">
+          <input type="radio" id="ranked_false" name="ranked" value="false" checked>
+          <label for="ranked_false" class="quickplay"><div>QuickPlay</div></label><br>
+
+          <input type="radio" id="ranked_true" name="ranked" value="true">
+          <label for="ranked_true" class="competitive"><div>Competitive</div></label><br>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <h2 class="text-glow">Difficulty</h2>
+
+        <div class="radio-group">
+          <input type="radio" id="common" name="difficulty" value="common">
+          <label for="common" class="common"><div>Common</div></label><br>
+
+          <input type="radio" id="normal" name="difficulty" value="normal" checked>
+          <label for="normal" class="normal"><div>Normal</div></label><br>
+
+          <input type="radio" id="rare" name="difficulty" value="rare">
+          <label for="rare" class="rare"><div>Rare</div></label><br>
+
+          <input type="radio" id="impossible" name="difficulty" value="impossible">
+          <label for="impossible" class="impossible"><div>Impossible</div></label><br>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <h2 class="text-glow">Board Size</h2>
+
+        <div class="radio-group">
+          <input type="radio" id="size_3" name="size" value="3">
+          <label for="size_3" class="s3"><div>3x3</div></label><br>
+
+          <input type="radio" id="size_5" name="size" value="5" checked>
+          <label for="size_5" class="s5"><div>5x5</div></label><br>
+
+          <input type="radio" id="size_7" name="size" value="7">
+          <label for="size_7" class="s7"><div>7x7</div></label><br>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <input type="submit" value="Ready" class="ready box-glow">
+      </div>
+
+    </form>
+  </body>
+</html>
