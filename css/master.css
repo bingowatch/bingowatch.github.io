@@ -1,11 +1,16 @@
 @@font-face {
-  src: url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff2) url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff) url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.ttf);
   font-family: BigNoodleTooOblique;
+  src:
+    url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff2),
+    url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff),
+    url(http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.ttf);
 }
 
 @@font-face {
-  src: url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.woff2) url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.woff) url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.ttf);
   font-family: Koverwatch;
+  src: url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.woff2),
+  url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.woff),
+  url(http://us.battle.net/forums/static/fonts/bignoodletoo/koverwatch.ttf);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
