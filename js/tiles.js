@@ -534,7 +534,7 @@ const tiles = {
   },
 
   pharmercy: {
-    name: 'Phara Mercy',
+    name: 'Pharah Mercy',
     description: 'A Pharah is hard pocketed by a Mercy.',
   },
 
