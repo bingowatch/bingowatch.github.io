@@ -44,6 +44,18 @@ table.card {
   --description-size: 12pt;
 }
 
+@media (max-width: 599px) {
+  table.card {
+    --tile-width: 128px;
+    --tile-height: 160px;
+
+    --details-width: 190px;
+    --details-height: 250px;
+
+    --description-size: 14pt;
+  }
+}
+
 table.card td div.tile-container, table.card td div.tile-content {
   width: var(--tile-width);
   height: var(--tile-height);
