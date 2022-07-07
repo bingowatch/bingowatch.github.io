@@ -17,7 +17,6 @@ const pools = {
     ['spamzo'],
     ['rolled'],
     ['battle_mercy'],
-    ['shatter_block'],
     ['me_diff', 'ggez'],
     ['no_ot'],
     ['skill_orb'],
@@ -39,6 +38,7 @@ const pools = {
     ['practice_10'],
     ['melee_final_blow'],
     ['streak_5', 'elims_25'],
+    ['shatter_block'],
   ],
 
   'normal': [
@@ -48,7 +48,7 @@ const pools = {
     ['solo_cap'],
     ['stacking_ults'],
     ['fewest_deaths'],
-    ['huge_shatter'],
+    ['shatter_block', 'huge_shatter'],
     ['awkward_transce'],
     ['sniper_monkey'],
     ['remech_kill'],
